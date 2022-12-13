@@ -30,8 +30,39 @@ public class MainActivity extends AppCompatActivity {
 
     private void initListeners(){
         btnLogin1.setOnClickListener(new BtnLogin1ClickListener());
-        //btnLogin2.setOnClickListener(new BtnLogin2ClickListener());
-        //btnLogin3.setOnClickListener(new BtnLogin3CLickListener());
+        btnLogin2.setOnClickListener(new BtnLogin2ClickListener());
+        btnLogin3.setOnClickListener(new BtnLogin3CLickListener());
+    }
+    //way 3
+    class BtnLogin3CLickListener implements View.OnClickListener{
+        @Override
+        public void onClick(View v) {
+            LogoutDialog logoutDialog = new LogoutDialog(MainActivity.this);
+            logoutDialog.setOnLogoutListener(new MyOnLogoutListener());
+            logoutDialog.show();
+        }
+    }
+
+    class MyOnLogoutListener implements LogoutDialog.OnLogoutListener{
+
+        @Override
+        public void onLogoutSuccessful() {
+            makeToast("Success");
+        }
+
+        @Override
+        public void onLogoutFailure() {
+            makeToast("Failure");
+        }
+    }
+
+    //way 2
+    class BtnLogin2ClickListener implements View.OnClickListener{
+        @Override
+        public void onClick(View v) {
+            LogoutDialog logoutDialog = new LogoutDialog(MainActivity.this);
+            logoutDialog.show();
+        }
     }
 
     //way 1
