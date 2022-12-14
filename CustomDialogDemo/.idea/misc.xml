@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24003623188405798" />
+        <entry key="app/src/main/res/layout/dashboard_activity.xml" value="0.36253041362530414" />
         <entry key="app/src/main/res/layout/logout_dialog.xml" value="0.24139492753623187" />
       </map>
     </option>

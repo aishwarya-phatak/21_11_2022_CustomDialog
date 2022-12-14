@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 public class LogoutDialog extends Dialog {
     Button btnLogout;
     EditText edtUsername, edtPassword;
-
+    //SOLID Principles
     public interface OnLogoutListener{
         void onLogoutSuccessful();
         void onLogoutFailure();
